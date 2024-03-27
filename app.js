@@ -48,3 +48,15 @@
 // Why is true converted to 1?
 // The rule for == says if one of the operands is boolean, it's converted to number before the comparison.
 // true is converted to its number value, which is 1.
+
+// Quiz - 4:
+
+// const num = [1, 23, 4];
+// num.sort();
+// console.log(num[1]);
+
+// O/P: 23.
+
+// Explanation: The sort method use string comparisons by default. It works on Elements of the arrays as strings based on their Unicode.
+// In order to make it properly work, you should use:
+// num.sort(function(a,b){return a - b;}) will give answer 5, As it will treat array as numeric.
