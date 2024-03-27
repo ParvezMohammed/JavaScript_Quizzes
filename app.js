@@ -60,3 +60,30 @@
 // Explanation: The sort method use string comparisons by default. It works on Elements of the arrays as strings based on their Unicode.
 // In order to make it properly work, you should use:
 // num.sort(function(a,b){return a - b;}) will give answer 5, As it will treat array as numeric.
+
+
+// Quiz - 5:
+
+// let x = 1;
+// function foo () {
+//     x = 2;
+//     return function () {
+//         console.log(x);
+//     }
+// }
+// let bar = foo ();
+// bar();
+// x = 3;
+// bar();
+
+// O/P: 
+
+// 2
+// 3
+
+// Explanation: 
+
+// Important point to note here is 'x' is declared in global scope. Hence, each time we assign a value to it, the value is changed in global scope.
+
+// First change happened when foo() is called. [x = 2]
+// Second change happened before bar() is called the second time. [x = 3]
